@@ -1,0 +1,61 @@
+/* Ícone giratório - loading */
+#spinner {
+  border: 6px solid rgb(52, 152, 219, 0.3);
+  border-top: 6px solid rgb(52, 152, 219);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin: 12px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Ícone de check com animação de stroke */
+#checkmark {
+  width: 56px;
+  height: 56px;
+  stroke: #2ecc71;
+  stroke-width: 5;
+  fill: none;
+  stroke-linecap: round;
+  animation: drawCheck 0.5s ease-out forwards;
+}
+
+@keyframes drawCheck {
+  0% {
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Ícone de X com animação de stroke */
+#crossmark {
+  width: 56px;
+  height: 56px;
+  stroke: rgb(231, 76, 60);
+  stroke-width: 5;
+  fill: none;
+  stroke-linecap: round;
+  animation: drawX 0.5s ease-out forwards;
+}
+
+@keyframes drawX {
+  0% {
+    stroke-dasharray: 40;
+    stroke-dashoffset: 40;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}

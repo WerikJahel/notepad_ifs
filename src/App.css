@@ -1,0 +1,148 @@
+#root {
+  /* max-width: 1280px; */
+  margin: 0 auto;
+  /* padding: 2rem; */
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+#body {
+  min-height: 100vh;
+
+  #notes {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2vh;
+    gap: 2vh;
+    flex-wrap: wrap;
+    align-items: stretch;
+
+    @media (max-width: 426px) {
+      padding: 4vh;
+    }
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: #61dafbaa;
+      border-radius: 10px;
+      padding: 2vh;
+      cursor: pointer;
+      width: 21vw;
+      height: 30vh;
+
+      @media (max-width: 426px) {
+        width: 100%;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      h3,
+      p {
+        margin: 0;
+      }
+
+      > p {
+        text-align: end;
+      }
+
+      div > p {
+        text-align: justify;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 20vh;
+      }
+    }
+  }
+
+  #buttons-fixed {
+    position: fixed;
+    right: 1vh;
+    bottom: 1vh;
+    z-index: 1;
+
+    img {
+      cursor: pointer;
+      width: 2.5rem;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .pop-ups {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    display: grid;
+    place-items: center;
+    background-color: rgba(225, 225, 225, 0.3);
+    overflow-y: scroll;
+
+    > div,
+    > fieldset {
+      background-color: lightgray;
+      padding: 2vh;
+      border-radius: 1vh;
+      border: solid 3px var(--second-dark-color);
+      max-width: 80vw;
+      min-width: 50vw;
+      margin: 8vh 0vw;
+      display: inline-grid;
+      gap: 0.5vh;
+
+      > legend {
+        border: 2px solid var(--first-dark-color);
+      }
+
+      > form {
+        max-width: 80vw;
+        min-width: 50vw;
+        display: inline-grid;
+        gap: 0.5vh;
+      }
+    }
+  }
+}

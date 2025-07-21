@@ -1,0 +1,24 @@
+#pop-up-Form {
+  div {
+    display: flex;
+    justify-content: center;
+    gap: 1vh;
+
+    * {
+      border-radius: 10px;
+    }
+
+    input {
+      width: 100%;
+    }
+
+    textarea {
+      text-align: justify;
+      padding: 1vh;
+    }
+
+    &:nth-of-type(2) {
+      flex-direction: column;
+    }
+  }
+}
